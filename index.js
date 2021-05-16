@@ -244,7 +244,7 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: 'Calma estoy procesando\n\nNo spames 🤬\n\nGracias por su paciencia 🧐\n\Los stickergif son de 6 segundos 🤢\n\nby Keos',
+				wait: 'Calma estoy procesando\n\nNo spames 🤬\n\nGracias por su paciencia 🧐\n\Los stickergif son de 6 segundos \n\nby Keos',
 				success: '✔️ Listo ✔️',
                                 levelon: '❬ ✔ ❭ *Level activado*',
 				leveloff: ' ❬ X ❭  *Level desactivado*',
@@ -807,7 +807,7 @@ async function starts() {
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 Mencionar A Todos 〙✪══\n╠➥'+teks+'╚═〘 ShanBot 〙', members_id, true)
+					mentions('╔══✪〘 Mencionar A Todos 〙✪══\n╠➥'+teks+'╚═〘 KEOS 〙', members_id, true)
 					break
                 case 'tagall2':
 				client.updatePresence(from, Presence.composing) 
@@ -951,7 +951,7 @@ async function starts() {
 					}, 2000)
                      setTimeout( () => {
 					client.updatePresence(from, Presence.composing) 
-					client.sendMessage(from, 'Chao Pa👋', text) // ur cods
+					client.sendMessage(from, 'Chao 👋', text) // ur cods
 					}, 0)
                      break
 
@@ -1008,7 +1008,7 @@ async function starts() {
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (args.length < 1) return reply('Que buscas pa?')
-					if (args[0].startsWith('08')) return reply('Soy un bot, weon')
+					if (args[0].startsWith('08')) return reply('Soy un bot')
 					try {
 						num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
 						client.groupAdd(from, [num])
@@ -1239,7 +1239,7 @@ async function starts() {
 						fs.unlinkSync(media)
 						if (err) return reply('❌ Error al convertir las pegatinas en imágenes ❌')
 						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'NEFAAAASSSSSSTOOOOOOOO'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'aaaaaaaaaaa'})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1312,14 +1312,14 @@ async function starts() {
 					break
                                   case 'daftar':
 					client.updatePresence(from, Presence.composing)
-					if (isUser) return reply('Ya estas registrado gordo trolo 🧐')
+					if (isUser) return reply('Ya estas registrado 🧐')
 					if (args.length < 1) return reply(`Incorrecto \nCommand : ${prefix}daftar Nombre\nComando : ${prefix}daftar Shanduy`)
 					var reg = body.slice(8)
 					var jeneng = reg.split("|")[0];
 					var umure = reg.split("|")[1];
 						user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `\`\`\`Registrado con exito flaco 👏😎🥳\`\`\`\n\n\`\`\`DNI: Fan De Cuties 🤑😎\`\`\`\n\n\`\`\`Dia ${date} ${time}\`\`\`\n\`\`\`[Usuario]: ${jeneng}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
+						client.sendMessage(from, `\`\`\`Registrado con exito \`\`\`\n\n\`\`\`DNI: Demonio 😎\`\`\`\n\n\`\`\`Dia ${date} ${time}\`\`\`\n\`\`\`[Usuario]: ${jeneng}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
 					break
                                 case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
@@ -1941,7 +1941,7 @@ async function starts() {
 					client.sendMessage(from, buffer, video, {quoted: mek})
 					break*/
 				case 'ttp':
-					if (args.length < 1) return reply('Y el texto flaco?')
+					if (args.length < 1) return reply('Y el texto?')
 					ranp = getRandom('.png')
 					rano = getRandom('.webp')
 					teks = body.slice(4).trim()
